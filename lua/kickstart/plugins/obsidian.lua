@@ -17,24 +17,24 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
-		workspaces = {
-			{
-				name = "personal",
-				path = "~/vaults/personal",
-			},
-			{
-				name = "work",
-				path = "~/vaults/work",
-				-- Optional, override certain settings.
-				overrides = {
-					notes_subdir = "notes",
-				},
-			},
-		},
+		--workspaces = {
+		--	{
+		--		name = "personal",
+		--		path = "~/vaults/personal",
+		--	},
+		--	{
+		--		name = "work",
+		--		path = "~/vaults/work",
+		--		-- Optional, override certain settings.
+		--		overrides = {
+		--			notes_subdir = "notes",
+		--		},
+		--	},
+		--},
 
 		-- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
 		-- 'workspaces'. For example:
-		-- dir = "~/vaults/work",
+		dir = "~/vaults/work",
 
 		-- Optional, if you keep notes in a specific subdirectory of your vault.
 		notes_subdir = "notes",
@@ -65,93 +65,6 @@ return {
 		-- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
 		-- way then set 'mappings = {1}'.
 		mappings = {
-			["oo"] = {
-				action = function()
-					vim.cmd("ObsidianOpen")
-				end,
-			},
-			["on"] = {
-				action = function()
-					vim.cmd("ObsidianNew ")
-				end,
-			},
-			["oqs"] = {
-				action = function()
-					vim.cmd("ObsidianQuickSwitch")
-				end,
-			},
-			["ofl"] = {
-				action = function()
-					vim.cmd("ObsidianFollowLink")
-				end,
-			},
-			["obl"] = {
-				action = function()
-					vim.cmd("ObsidianBackLinks")
-				end,
-			},
-			["ot"] = {
-				action = function()
-					vim.cmd("ObsidianTags")
-				end,
-			},
-			["oto"] = {
-				action = function()
-					vim.cmd("ObsidianToday")
-				end,
-			},
-			["otom"] = {
-				action = function()
-					vim.cmd("ObsidianTomorrow")
-				end,
-			},
-			["oyes"] = {
-				action = function()
-					vim.cmd("ObsidianYesterday")
-				end,
-			},
-			["od"] = {
-				action = function()
-					vim.cmd("ObsidianDailies")
-				end,
-			},
-			["otlt"] = {
-				action = function()
-					vim.cmd("ObsidianTemplate")
-				end,
-			},
-			["ol"] = {
-				action = function()
-					vim.cmd("ObsidianLink")
-				end,
-			},
-			["oln"] = {
-				action = function()
-					vim.cmd("ObsidianLinkNew ")
-				end,
-			},
-			["olp"] = {
-				action = function()
-					vim.cmd("ObsidianLinks")
-				end,
-			},
-			["oex"] = {
-				action = function()
-					vim.cmd("ObsidianExtractNote ")
-				end,
-			},
-			["ow"] = {
-				action = function()
-					vim.cmd("ObsidianWorkspace ")
-				end,
-			},
-			["opi"] = {
-				action = function()
-					vim.cmd("ObsidianPasteImg")
-				end,
-			},
-		},
-		{
 			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
 			["gf"] = {
 				action = function()
